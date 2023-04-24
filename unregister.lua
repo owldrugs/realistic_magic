@@ -15,4 +15,7 @@ minetest.unregister_item("default:sword_stone")
 minetest.unregister_item("default:hoe_wood")
 minetest.unregister_item("default:hoe_stone")
 
+minetest.unregister_item("default:furnace")
+minetest.unregister_item("default:furnace_active")
+
 return unregister
