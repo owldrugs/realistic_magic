@@ -11,13 +11,15 @@ minetest.register_node("realistic_magic:stone",{
         type = "fixed",
         fixed = {-0.1,-0.5,-0.1,0.1,-0.4,0.1}
     },
-    groups = {cracky=1},
+    groups = {dig_immediate=3},
     drop = {
         items = {
-            -- assume that mod:cobblestone also has the same palette
             {items = {"default:cobble"}},
         }
-    }
+    },
+    sounds = {
+        dug = {name = "default_dig_cracky", gain = 0.5},
+    },
 })
 
 minetest.register_decoration({
@@ -30,31 +32,4 @@ minetest.register_decoration({
     decoration = "realistic_magic:stone",
 })
 
-minetest.register_tool("realistic_magic:digging_stick", {
-    description = "Digging stick",
-    inventory_image = "stick_dig.png",
-    tool_capabilities = {
-        full_punch_interval = 1.5,
-        max_drop_level = 1,
-        groupcaps = {
-            crumbly = {
-                maxlevel = 1,
-                uses = 20,
-                times = { [1]=1.20, [2]=0.80, [3]=0.40}
-            },
-            cracky = {
-                maxlevel = 1,
-                uses = 20,
-                times = { [2]=3.00, [3]=2.00 }
-            },
-
-            choppy = {
-                maxlevel = 1,
-                uses = 20,
-                times = { [1]=1.80, [2]=1.40, [3]=1.00 }
-            },
-        },
-        damage_groups = {fleshy=2},
-    },
-})
 return nodes
