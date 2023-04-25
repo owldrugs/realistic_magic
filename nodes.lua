@@ -1,5 +1,5 @@
 nodes = {}
-
+--stone shatd
 minetest.register_node("realistic_magic:stone",{
     description = "Stone shard",
     tiles = {"default_stone.png"},
@@ -31,5 +31,8 @@ minetest.register_decoration({
     y_min = 1,
     decoration = "realistic_magic:stone",
 })
+
+--baked clay
+
 
 return nodes

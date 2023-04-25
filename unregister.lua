@@ -1,5 +1,6 @@
 unregister = {}
 
+--wooden tools
 minetest.unregister_item("default:pick_wood")
 minetest.unregister_item("default:pick_stone")
 
@@ -17,5 +18,11 @@ minetest.unregister_item("default:hoe_stone")
 
 minetest.unregister_item("default:furnace")
 minetest.unregister_item("default:furnace_active")
+
+--crafts
+minetest.clear_craft({
+    output = "default:clay_brick",
+    type = "cooking",
+})
 
 return unregister
