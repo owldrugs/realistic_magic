@@ -34,5 +34,26 @@ minetest.register_decoration({
 
 --baked clay
 
+minetest.register_node("realistic_magic:baked_clay", {
+    description = "Baked clay",
+    tiles = {"baked_clay.png"},
+    groups = {cracky = 3},
+    drop = {
+        items = {
+            {items = {"realistic_magic:baked_clay"}},
+        }
+    },
+})
+
+minetest.register_node("realistic_magic:baked_clay_active", {
+    description = "Baked clay",
+    tiles = {"baked_clay_active.png"},
+    groups = {cracky = 3},
+    drop = {
+        items = {
+            {items = {"realistic_magic:baked_clay"}},
+        }
+    },
+})
 
 return nodes
